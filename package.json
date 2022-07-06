@@ -9,9 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fontsource/iosevka": "^4.5.4",
+    "@radix-ui/react-icons": "^1.1.1",
+    "@stitches/react": "^1.2.8",
     "next": "12.2.0",
+    "next-themes": "^0.2.0",
+    "prettier": "^2.7.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "stitches-normalize-css": "^1.2.0"
   },
   "devDependencies": {
     "@types/node": "18.0.1",

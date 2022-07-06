@@ -1,0 +1,5 @@
+export * from "./GitHubLogoIcon"
+export * from "./EmailIcon"
+export * from "./PhoneIcon"
+export * from "./LightModeIcon"
+export * from "./DarkModeIcon"
