@@ -17,7 +17,7 @@ const Footer = styled("footer", {
 export const SiteFooter = () => {
   return (
     <Footer>
-      Built with <HeartIcon color={theme.colors.red} /> in Chicago, IL. &copy; 2022. All rights reserved.
+      Built with <HeartIcon color={theme.colors.red as string} /> in Chicago, IL. &copy; 2022. All rights reserved.
     </Footer>
   )
 }
