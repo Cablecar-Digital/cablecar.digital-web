@@ -1,3 +1,4 @@
+import { ReactNode } from 'react'
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { useRouter } from "next/router";
 import { styled } from "../theme.config"
@@ -68,7 +69,7 @@ const TransitionWrapper = styled("div", {
   }
 })
 
-export const PageTransition = ({ children }) => {
+export const PageTransition = ({ children }): ReactNode => {
   const { asPath } = useRouter();
   const shouldReduceMotion = useReducedMotion();
 

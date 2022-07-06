@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, ReactNode } from "react"
 import Link from "next/link"
 import { useTheme } from "next-themes";
 import { LightModeIcon, DarkModeIcon } from "../components/icons"
@@ -44,7 +44,7 @@ const Actions = styled("div", {
 })
 
 
-export const SiteHeader = ({ children }) => {
+export const SiteHeader = ({ children }): ReactNode => {
   const { theme: currentTheme, setTheme } = useTheme();
   const toggleTheme = () =>
     setTheme(currentTheme === "light" ? "dark-theme" : "light");

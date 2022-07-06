@@ -1,3 +1,4 @@
+import { ReactNode } from 'react'
 import { SiteHeader } from "./Header"
 import { SiteFooter } from "./Footer"
 import { styled } from '../theme.config'
@@ -18,7 +19,7 @@ const Main = styled("main", {
   minHeight: "100vh",
 });
 
-export const Layout = ({ children }) => {
+export const Layout = ({ children }): ReactNode => {
   return (
     <Page>
       <Main>
