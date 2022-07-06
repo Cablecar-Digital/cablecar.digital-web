@@ -1,7 +1,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import { useTheme } from "next-themes";
-import { LightModeIcon, DarkModeIcon } from "../c/* o */mponents/icons"
+import { LightModeIcon, DarkModeIcon } from "../components/icons"
 import { ThemeSwitcher } from "./ThemeSwitcher"
 import { theme, styled } from '../theme.config'
 
