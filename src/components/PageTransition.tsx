@@ -80,7 +80,7 @@ export const PageTransition: FC<PageTransitionProps> = ({ children }) => {
       <AnimatePresence initial={false} exitBeforeEnter>
         <motion.div
           key={asPath}
-          variants={!shouldReduceMotion ? variants : null}
+          variants={!shouldReduceMotion ? variants : undefined}
           initial="in"
           animate={["center", "scaleUp"]}
           exit={["scaleDown", "out"]}

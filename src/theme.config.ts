@@ -1,4 +1,5 @@
 import { createStitches } from "@stitches/react";
+import type * as Stitches from '@stitches/react';
 import { normalize } from "stitches-normalize-css";
 
 export const {
@@ -280,69 +281,69 @@ export const {
     "2xl": "(min-width: 1536px)",
   },
   utils: {
-    // Abbreviated margin properties
-    m: (value) => ({
-      margin: value,
-    }),
-    mt: (value) => ({
-      marginTop: value,
-    }),
-    mr: (value) => ({
-      marginRight: value,
-    }),
-    mb: (value) => ({
-      marginBottom: value,
-    }),
-    ml: (value) => ({
-      marginLeft: value,
-    }),
-    mx: (value) => ({
-      marginLeft: value,
-      marginRight: value,
-    }),
-    my: (value) => ({
-      marginTop: value,
-      marginBottom: value,
-    }),
-    p: (value) => ({
-      padding: value,
-    }),
-    pt: (value) => ({
-      paddingTop: value,
-    }),
-    pr: (value) => ({
-      paddingRight: value,
-    }),
-    pb: (value) => ({
-      paddingBottom: value,
-    }),
-    pl: (value) => ({
-      paddingLeft: value,
-    }),
-    px: (value) => ({
-      paddingLeft: value,
-      paddingRight: value,
-    }),
-    py: (value) => ({
-      paddingTop: value,
-      paddingBottom: value,
-    }),
+    // // Abbreviated margin properties
+    // m: (value: any) => ({
+    //   margin: value,
+    // }),
+    // mt: (value: any) => ({
+    //   marginTop: value,
+    // }),
+    // mr: (value: any) => ({
+    //   marginRight: value,
+    // }),
+    // mb: (value: any) => ({
+    //   marginBottom: value,
+    // }),
+    // ml: (value: Stitches.ScaleValue<'space'>) => ({
+    //   marginLeft: value,
+    // }),
+    // mx: (value: Stitches.ScaleValue<'space'>) => ({
+    //   marginLeft: value,
+    //   marginRight: value,
+    // }),
+    // my: (value: Stitches.ScaleValue<'space'>) => ({
+    //   marginTop: value,
+    //   marginBottom: value,
+    // }),
+    // p: (value: Stitches.ScaleValue<'space'>) => ({
+    //   padding: value,
+    // }),
+    // pt: (value: Stitches.ScaleValue<'space'>) => ({
+    //   paddingTop: value,
+    // }),
+    // pr: (value: Stitches.ScaleValue<'space'>) => ({
+    //   paddingRight: value,
+    // }),
+    // pb: (value: Stitches.ScaleValue<'space'>) => ({
+    //   paddingBottom: value,
+    // }),
+    // pl: (value: Stitches.ScaleValue<'space'>) => ({
+    //   paddingLeft: value,
+    // }),
+    // px: (value: Stitches.ScaleValue<'space'>) => ({
+    //   paddingLeft: value,
+    //   paddingRight: value,
+    // }),
+    // py: (value: Stitches.ScaleValue<'space'>) => ({
+    //   paddingTop: value,
+    //   paddingBottom: value,
+    // }),
 
-    // A property for applying width/height together
-    size: (value) => ({
-      width: value,
-      height: value,
-    }),
+    // // A property for applying width/height together
+    // size: (value: Stitches.ScaleValue<'space'>) => ({
+    //   width: value,
+    //   height: value,
+    // }),
 
-    // A property to apply linear gradient
-    linearGradient: (value) => ({
-      backgroundImage: `linear-gradient(${value})`,
-    }),
+    // // A property to apply linear gradient
+    // linearGradient: (value: Stitches.PropertyValue<'backgroundImage'>) => ({
+    //   backgroundImage: `linear-gradient(${value})`,
+    // }),
 
-    // An abbreviated property for border-radius
-    br: (value) => ({
-      borderRadius: value,
-    }),
+    // // An abbreviated property for border-radius
+    // br: (value: Stitches.PropertyValue<'borderRadius'>) => ({
+    //   borderRadius: value,
+    // }),
   },
 });
 

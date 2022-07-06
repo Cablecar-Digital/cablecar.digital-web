@@ -79,15 +79,15 @@ const Home: NextPage = () => {
       <SectionTitle>Connect with Us</SectionTitle>
       <SectionWrapper>
         <div>
-          <EmailIcon color={theme.colors.primary}/> <a href="mailto:bryan@cablecar.digital">bryan@cablecar.digital</a>
+          <EmailIcon color={theme.colors.primary as any}/> <a href="mailto:bryan@cablecar.digital">bryan@cablecar.digital</a>
         </div>
 
         <div>
-          <PhoneIcon color={theme.colors.primary}/>
+          <PhoneIcon color={theme.colors.primary as any}/>
           <a href="tel:2392002312">239-200-2312</a>
         </div>
         <div>
-          <GitHubLogoIcon color={theme.colors.primary}/>
+          <GitHubLogoIcon color={theme.colors.primary as any}/>
           <a href="http://github.com/Cablecar-Digital">github.com/Cablecar-Digital</a>
         </div>
       </SectionWrapper>

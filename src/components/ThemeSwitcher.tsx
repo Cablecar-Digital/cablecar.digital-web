@@ -17,9 +17,9 @@ export const ThemeSwitcher = () => {
   return (
     <SwitchButton onClick={toggleTheme}>
       {currentTheme === "dark-theme" ? (
-          <DarkModeIcon color={theme.colors.primary} />
+          <DarkModeIcon color={theme.colors.primary as any} />
       ) : (
-          <LightModeIcon color={theme.colors.muted}/>
+          <LightModeIcon color={theme.colors.muted as any}/>
       ) }
     </SwitchButton>
   )

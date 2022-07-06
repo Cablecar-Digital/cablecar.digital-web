@@ -43,11 +43,8 @@ const Actions = styled("div", {
   marginLeft: "auto"
 })
 
-interface SiteHeaderProps {
-  children: ReactNode
-}
 
-export const SiteHeader: FC<SiteHeaderProps> = ({ children }) => {
+export const SiteHeader: FC = () => {
 
   const { theme: currentTheme, setTheme } = useTheme();
   const toggleTheme = () =>
