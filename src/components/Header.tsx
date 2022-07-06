@@ -58,12 +58,12 @@ export const SiteHeader = ({ children }) => {
         </a>
       </Link>
 
-      <Menu>
-        <li><Link href="/services">Services</Link></li>
-        <li><Link href="/work">Work</Link></li>
-        <li><Link href="/contact">Contact</Link></li>
-      </Menu>
-
+      {/* <Menu>
+          <li><Link href="/services">Services</Link></li>
+          <li><Link href="/work">Work</Link></li>
+          <li><Link href="/contact">Contact</Link></li>
+          </Menu>
+        */}
       <Actions>
         <ThemeSwitcher />
       </Actions>

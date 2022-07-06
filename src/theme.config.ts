@@ -35,6 +35,7 @@ export const {
       dark: "#2d3748",
       textMuted: "#718096",
 
+      red: "#F43F5E",
 
       gray100: "#f7fafc",
       gray200: "#edf2f7",
