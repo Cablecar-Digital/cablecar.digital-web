@@ -1,4 +1,4 @@
-import { useState, FC } from "react"
+import { useState, FC, ReactNode } from "react"
 import Link from "next/link"
 import { useTheme } from "next-themes";
 import { LightModeIcon, DarkModeIcon } from "../components/icons"
@@ -43,12 +43,16 @@ const Actions = styled("div", {
   marginLeft: "auto"
 })
 
+interface SiteHeaderProps {
+  children: ReactNode
+}
 
-export const SiteHeader: FC= ({ children }) => {
+export const SiteHeader: FC<SiteHeaderProps> = ({ children }) => {
 
   const { theme: currentTheme, setTheme } = useTheme();
   const toggleTheme = () =>
     setTheme(currentTheme === "light" ? "dark-theme" : "light");
+
   return (
     <Header>
       <Link href="/">

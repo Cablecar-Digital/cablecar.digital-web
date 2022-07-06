@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, ReactNode } from 'react'
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { useRouter } from "next/router";
 import { styled } from "../theme.config"
@@ -45,10 +45,8 @@ const variants = {
   }
 };
 
-
 const TransitionWrapper = styled("div", {
   zIndex: 1,
-
   height: "100vh",
   "&:after": {
     content: "",
@@ -69,7 +67,11 @@ const TransitionWrapper = styled("div", {
   }
 })
 
-export const PageTransition: FC = ({ children }) => {
+interface PageTransitionProps {
+  children: ReactNode;
+}
+
+export const PageTransition: FC<PageTransitionProps> = ({ children }) => {
   const { asPath } = useRouter();
   const shouldReduceMotion = useReducedMotion();
 
