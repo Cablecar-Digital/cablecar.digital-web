@@ -16,9 +16,7 @@ const TrackingProvider: FC<{children: ReactNode}> = ({ children }) => {
 
   const [analytics, setAnalytics] = useState({
      isInitialized: false,
-     trackers: ['myDefaultTracker']
   });
-    console.log({analytics})
 
   const logEvent = ({ category = '', action = '', label = '' }) => {
     if (analytics.isInitialized) {
@@ -26,7 +24,7 @@ const TrackingProvider: FC<{children: ReactNode}> = ({ children }) => {
         category,
         action,
         label
-      }, analytics.trackers)
+      })
     }
   }
 
