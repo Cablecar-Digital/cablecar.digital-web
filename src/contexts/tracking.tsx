@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useEffect, FC, ReactNode } from  "react";
-import ReactGA from "react-ga"
+import ReactGA from "react-ga4"
 import Router from 'next/router';
 
 export interface ITrackingContext {
@@ -10,7 +10,7 @@ const defaultContext: ITrackingContext = {
   logEvent: (props: any) => null
 }
 const TrackingContext = createContext(defaultContext);
-const TrackingID = "UA-322925685-1";
+const TrackingID = "G-V6SKFTNVP9";
 
 const TrackingProvider: FC<{children: ReactNode}> = ({ children }) => {
 
@@ -32,8 +32,7 @@ const TrackingProvider: FC<{children: ReactNode}> = ({ children }) => {
 
   useEffect(() => {
     const handleRouteChange = (url: string)  => {
-      ReactGA.set({ page:  url }, analytics.trackers);
-      ReactGA.pageview(url, analytics.trackers);
+      ReactGA.send({ hitType: "pageview", page: url });
     }
     if (!analytics.isInitialized) {
       ReactGA.initialize(TrackingID)
