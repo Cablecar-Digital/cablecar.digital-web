@@ -1,12 +1,18 @@
-import { createContext, useContext, useState, useEffect } from  "react";
+import { createContext, useContext, useState, useEffect, FC, ReactNode } from  "react";
 import ReactGA from "react-ga"
 import Router from 'next/router';
 
-const TrackingID = "UA-322925685-1";
-const TrackingContext = createContext();
+export interface ITrackingContext {
+  logEvent: (props: any) => any
+}
 
-function TrackingProvider(props) {
-  const { userIdThatMightChange } = props
+const defaultContext: ITrackingContext = {
+  logEvent: (props: any) => null
+}
+const TrackingContext = createContext(defaultContext);
+const TrackingID = "UA-322925685-1";
+
+const TrackingProvider: FC<{children: ReactNode}> = ({ children }) => {
 
   const [analytics, setAnalytics] = useState({
      isInitialized: false,
@@ -25,8 +31,7 @@ function TrackingProvider(props) {
   }
 
   useEffect(() => {
-
-    const handleRouteChange = url  => {
+    const handleRouteChange = (url: string)  => {
       ReactGA.set({ page:  url }, analytics.trackers);
       ReactGA.pageview(url, analytics.trackers);
     }
@@ -45,12 +50,12 @@ function TrackingProvider(props) {
 
   return (
     <TrackingContext.Provider
-      value={{ logEvent }}
-      {...props}
-    />
+      value={{ logEvent }}>
+      {children}
+    </TrackingContext.Provider>
   )
 }
 
-const useTracking = () => useContext(TrackingContext);
+const useTracking = () => useContext<ITrackingContext>(TrackingContext);
 
 export { TrackingProvider, useTracking };

@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useTheme } from "next-themes";
-import { useTracking } from "../contexts/tracking"
+import { useTracking, ITrackingContext } from "../contexts/tracking"
 import { LightModeIcon, DarkModeIcon } from "../components/icons"
 import { theme, styled } from '../theme.config'
 
