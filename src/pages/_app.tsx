@@ -1,8 +1,9 @@
-import type { AppProps } from 'next/app'
+import type { AppProps } from "next/app"
 import { ThemeProvider } from "next-themes";
 import "@fontsource/iosevka";
-import { PageTransition } from '../components/PageTransition'
-import { resetGlobalCss, darkTheme } from '../theme.config'
+import { TrackingProvider } from "../contexts/tracking";
+import { PageTransition } from "../components/PageTransition"
+import { resetGlobalCss, darkTheme } from "../theme.config"
 
 function MyApp({ Component, pageProps }: AppProps) {
   resetGlobalCss();
@@ -11,13 +12,16 @@ function MyApp({ Component, pageProps }: AppProps) {
       attribute="class"
       defaultTheme="system"
       value={{
+        // IDKW, but this works and reversing them doesnt
         light: darkTheme,
         dark: "light"
       }}
     >
-      <PageTransition>
-        <Component {...pageProps} />
-      </PageTransition>
+      <TrackingProvider>
+        <PageTransition>
+          <Component {...pageProps} />
+        </PageTransition>
+      </TrackingProvider>
     </ThemeProvider>
   );
 }

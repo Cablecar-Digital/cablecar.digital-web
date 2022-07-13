@@ -45,7 +45,6 @@ const Actions = styled("div", {
 
 
 export const SiteHeader: FC = () => {
-
   const { theme: currentTheme, setTheme } = useTheme();
   const toggleTheme = () =>
     setTheme(currentTheme === "light" ? "dark-theme" : "light");
